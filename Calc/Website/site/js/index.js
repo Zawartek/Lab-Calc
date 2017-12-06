@@ -11,6 +11,23 @@ document.getElementById('check').onclick = function() {
     .then((response) => {
         // working
         retourT.innerText = "";
+    })
+    .catch((error) => {
+        // error
+        retourT.innerText = "SYNTAX ERROR";
+    })
+}
+
+document.getElementById('eval').onclick = function() {
+    var formulaP = document.getElementById('formula').value;
+    var retourT = document.getElementById('retour');
+
+    axios.post('http://localhost:8081/', {
+        formula: formulaP
+    })
+    .then((response) => {
+        // working
+        retourT.innerText = "";
         var expression = eval(formulaP);
         if (expression === Infinity) {
             retourT.innerText = "MATH ERROR";

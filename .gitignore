@@ -47,3 +47,7 @@ Temporary Items
 .apdisk
 Calc/Website/node_modules
 Calc/Api/node_modules
+Calc/Api/package-lock.json
+Calc/Website/package-lock.json
+Calc/Website/site/build/app.js
+Calc/Api/package.json
