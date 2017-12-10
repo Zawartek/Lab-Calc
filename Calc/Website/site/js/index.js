@@ -10,7 +10,7 @@ document.getElementById('check').onclick = function () {
     })
         .then((response) => {
             // working
-            retourT.innerText = "";
+            retourT.innerText = "SYNTAX CHECKED";
         })
         .catch((error) => {
             // error
