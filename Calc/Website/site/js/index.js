@@ -33,9 +33,9 @@ document.getElementById('eval').onclick = function () {
             }
             else {
                 var nombres = formulaClean.split(/[+---*-\/]/);
-                var operateurs = formulaClean.split(/[0-9]/);
+                var operateurs = formulaClean.replace(/[0-9]/g, "").split("");
                 var indiceNb;
-                var indiceOp = 1;
+                var indiceOp = 0;
                 var resultat = nombres[0];
 
                 for (indiceNb = 1; indiceNb < nombres.length; indiceNb++) {
